@@ -400,7 +400,7 @@ module openAi 'core/ai/cognitiveservices.bicep' = if (isAzureOpenAiHost) {
       name: openAiSkuName
     }
     deployments: openAiDeployments
-    disableLocalAuth: true
+    disableLocalAuth: false
   }
 }
 

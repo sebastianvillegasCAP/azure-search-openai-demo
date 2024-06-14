@@ -414,7 +414,7 @@ module documentIntelligence 'core/ai/cognitiveservices.bicep' = {
     kind: 'FormRecognizer'
     publicNetworkAccess: publicNetworkAccess
     location: documentIntelligenceResourceGroupLocation
-    disableLocalAuth: true
+    disableLocalAuth: false
     tags: tags
     sku: {
       name: documentIntelligenceSkuName
@@ -459,7 +459,7 @@ module searchService 'core/search/search-services.bicep' = {
     name: !empty(searchServiceName) ? searchServiceName : 'gptkb-${resourceToken}'
     location: !empty(searchServiceLocation) ? searchServiceLocation : location
     tags: tags
-    disableLocalAuth: true
+    disableLocalAuth: false
     sku: {
       name: searchServiceSkuName
     }
